@@ -60,7 +60,7 @@ export default function LandingPage() {
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-6">
         <div className="text-center mb-12 space-y-4">
           <h1 className="font-playfair text-5xl md:text-7xl font-bold text-[hsl(45,90%,85%)] drop-shadow-[0_0_30px_rgba(255,215,0,0.3)]">
-            Festival Celebration
+            Welcome Anvesha
           </h1>
           <p className="font-poppins text-lg md:text-xl text-[hsl(45,60%,75%)] max-w-2xl mx-auto">
             Step through the gates to celebrate the festivals together
