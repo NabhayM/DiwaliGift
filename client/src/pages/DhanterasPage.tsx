@@ -76,16 +76,19 @@ export default function DhanterasPage() {
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-6">
         <div className="text-center space-y-12 max-w-4xl">
-          <h1
-            className={`font-playfair text-5xl md:text-7xl font-bold transition-all duration-1000 ${
-              isLit
-                ? "text-[hsl(30,15%,15%)] drop-shadow-lg"
-                : "text-[hsl(45,90%,85%)] drop-shadow-[0_0_30px_rgba(255,215,0,0.3)]"
-            }`}
-            data-testid="text-headline"
-          >
-            Happy Dhanteras Anvesha
-          </h1>
+          {/* --- CHANGE IS HERE --- */}
+          {/* The heading will now only appear when the diya is lit */}
+          {isLit ? (
+            <h1
+              className="font-playfair text-5xl md:text-7xl font-bold text-[hsl(30,15%,15%)] drop-shadow-lg animate-fade-in-scale"
+              data-testid="text-headline"
+            >
+              Happy Dhanteras Anvesha
+            </h1>
+          ) : (
+            // This is a placeholder to prevent the layout from jumping when the heading appears
+            <div className="h-[60px] md:h-[84px]"></div>
+          )}
 
           <div className="relative flex flex-col items-center space-y-8">
             <svg
@@ -183,7 +186,8 @@ export default function DhanterasPage() {
             >
               <div className="bg-gradient-to-br from-[hsl(45,90%,95%,0.95)] to-[hsl(40,80%,90%,0.9)] backdrop-blur-md rounded-lg p-8 md:p-12 border-2 border-[hsl(45,85%,55%)] shadow-2xl animate-glow-pulse">
                 <p className="font-devanagari text-2xl md:text-3xl leading-relaxed text-[hsl(30,15%,15%)] font-medium">
-                  Kripya Maa Lakshmi, humare pyaar par apna ashirvaad banaye rakhe aur humein sukh, shanti aur dhan se bhara jeevan pradan kare. 🙏🏻
+                  Anvesha, is Dhanteras mai Maa Lakshmi se prathna karta hoon 🙏🏻 ki wo humare pyar par apna ashirvaad banaye rakhe aur hume sukh, shanti, aur dhan daulat se bhara jeevan de. Tum meri life ki sabse anmol dhan ho, tumhari chamak ke samne sona bhi sharma jaye. Jab mai tumhare saath hota hoon to tumhari <br />chamak se mai bhi chamakne lagta hoon.                  
+                  <br />Happy Dhanteras meri jaan 💞
                 </p>
               </div>
             </div>

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 
 const festivals = [
-  { id: "dhanteras", name: "Dhanteras", password: "dhanteras123" },
+  { id: "dhanteras", name: "Dhanteras", password: "money" },
   { id: "choti-diwali", name: "Choti Diwali", password: "choti123" },
   { id: "diwali", name: "Diwali", password: "diwali123" },
   { id: "govardhan-pooja", name: "Govardhan Pooja", password: "govardhan123" },
