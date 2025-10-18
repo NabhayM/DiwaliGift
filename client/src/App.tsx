@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import LandingPage from "@/pages/LandingPage";
 import DhanterasPage from "@/pages/DhanterasPage";
+import DiwaliPage from "@/pages/DiwaliPage";
 import PlaceholderFestivalPage from "@/pages/PlaceholderFestivalPage";
 import NotFound from "@/pages/not-found";
 
@@ -16,9 +17,7 @@ function Router() {
       <Route path="/festival/choti-diwali">
         {() => <PlaceholderFestivalPage festivalName="Choti Diwali" />}
       </Route>
-      <Route path="/festival/diwali">
-        {() => <PlaceholderFestivalPage festivalName="Diwali" />}
-      </Route>
+      <Route path="/festival/diwali" component={DiwaliPage} />
       <Route path="/festival/govardhan-pooja">
         {() => <PlaceholderFestivalPage festivalName="Govardhan Pooja" />}
       </Route>
