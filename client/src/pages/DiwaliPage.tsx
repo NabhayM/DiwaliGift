@@ -37,7 +37,7 @@ export default function DiwaliPage() {
 
   const triggerFireworksBurst = () => {
     const newFireworks: Firework[] = [];
-    const count = 8;
+    const count = 6;
     
     for (let i = 0; i < count; i++) {
       newFireworks.push({
@@ -60,11 +60,12 @@ export default function DiwaliPage() {
 
   return (
     <div
-      className={`min-h-screen relative overflow-hidden transition-all duration-[3000ms] ${
+      className={`min-h-screen relative overflow-hidden transition-all ${
         isLit
           ? "bg-gradient-to-br from-[hsl(240,60%,15%)] via-[hsl(260,50%,20%)] to-[hsl(280,40%,18%)]"
           : "bg-[hsl(240,30%,8%)]"
       }`}
+      style={{ transitionDuration: '3000ms' }}
     >
       <Link to="/" data-testid="link-home">
         <Button
@@ -91,7 +92,7 @@ export default function DiwaliPage() {
       {fireworks.map((firework) => (
         <div
           key={firework.id}
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none will-change-transform"
           style={{
             left: `${firework.x}%`,
             top: `${firework.y}%`,
@@ -99,7 +100,7 @@ export default function DiwaliPage() {
         >
           {/* Launch trail */}
           <div
-            className="absolute w-2 h-16 rounded-full animate-firework-launch"
+            className="absolute w-2 h-16 rounded-full animate-firework-launch will-change-transform"
             style={{
               background: `linear-gradient(to top, ${firework.color}, transparent)`,
               animationDelay: `${firework.delay}s`,
@@ -107,16 +108,16 @@ export default function DiwaliPage() {
           />
           
           {/* Burst particles */}
-          {[...Array(24)].map((_, i) => {
-            const angle = (i * 15) * Math.PI / 180;
-            const distance = 60 + Math.random() * 40;
+          {[...Array(16)].map((_, i) => {
+            const angle = (i * 22.5) * Math.PI / 180;
+            const distance = 50 + Math.random() * 30;
             const x = Math.cos(angle) * distance;
             const y = Math.sin(angle) * distance;
             
             return (
               <div
                 key={i}
-                className="absolute w-1 h-1 rounded-full animate-firework-burst"
+                className="absolute w-1 h-1 rounded-full animate-firework-burst will-change-transform"
                 style={{
                   backgroundColor: firework.color,
                   left: '0',
@@ -134,10 +135,10 @@ export default function DiwaliPage() {
       {/* Ambient sparkles */}
       {isLit && (
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(50)].map((_, i) => (
+          {[...Array(25)].map((_, i) => (
             <div
               key={i}
-              className="absolute"
+              className="absolute will-change-transform"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,

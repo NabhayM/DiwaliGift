@@ -35,10 +35,10 @@ export default function DhanterasPage() {
 
       {showCoins && (
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(15)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-8 h-8 rounded-full bg-gradient-to-br from-[hsl(45,85%,60%)] to-[hsl(35,90%,55%)] border-2 border-[hsl(45,90%,50%)] flex items-center justify-center text-[hsl(45,30%,20%)] font-bold text-xs animate-coin-fall"
+              className="absolute w-8 h-8 rounded-full bg-gradient-to-br from-[hsl(45,85%,60%)] to-[hsl(35,90%,55%)] border-2 border-[hsl(45,90%,50%)] flex items-center justify-center text-[hsl(45,30%,20%)] font-bold text-xs animate-coin-fall will-change-transform"
               style={{
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 2}s`,
@@ -53,10 +53,10 @@ export default function DhanterasPage() {
 
       {isLit && (
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(40)].map((_, i) => (
+          {[...Array(25)].map((_, i) => (
             <div
               key={i}
-              className="absolute"
+              className="absolute will-change-transform"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
