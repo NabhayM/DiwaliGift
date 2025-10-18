@@ -183,8 +183,7 @@ export default function DhanterasPage() {
             >
               <div className="bg-gradient-to-br from-[hsl(45,90%,95%,0.95)] to-[hsl(40,80%,90%,0.9)] backdrop-blur-md rounded-lg p-8 md:p-12 border-2 border-[hsl(45,85%,55%)] shadow-2xl animate-glow-pulse">
                 <p className="font-devanagari text-2xl md:text-3xl leading-relaxed text-[hsl(30,15%,15%)] font-medium">
-                  Maa Lakshmi humare pyaar par ashirvaad banaye rakhe aur sukh,
-                  shanti aur dhan se bhara jeevan de.
+                  Kripya Maa Lakshmi, humare pyaar par apna ashirvaad banaye rakhe aur humein sukh, shanti aur dhan se bhara jeevan pradan kare. 🙏🏻
                 </p>
               </div>
             </div>
